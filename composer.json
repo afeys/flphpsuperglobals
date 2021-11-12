@@ -1,0 +1,33 @@
+{
+    "name": "afeys/flphpsuperglobals",
+    "description": "Some classes to read/write the superglobal variables $_REQUEST, $_SERVER, $_SESSION,..",
+    "keywords": [
+        "superglobal", "$_REQUEST", "$_SESSION", "$_SERVER"
+    ],
+    "homepage": "https://github.com/afeys/flphpsuperglobals",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Feys",
+            "email": "gitprojects@feys.be",
+            "homepage": "http://www.feys.be"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "support": {
+        "issues": "https://github.com/afeys/flphpsuperglobals/issues",
+        "source": "https://github.com/afeys/flphpsuperglobals/"
+    },
+    "autoload": {
+        "psr-4": { "flphpsuperglobals\\": "src/" },
+        "files": ["src/init.php"]
+    },
+    "autoload-dev": {
+        "classmap": [ "tests" ]
+    }
+}
