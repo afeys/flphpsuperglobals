@@ -1,8 +1,8 @@
 {
     "name": "afeys/flphpsuperglobals",
-    "description": "Some classes to read/write the superglobal variables $_REQUEST, $_SERVER, $_SESSION,..",
+    "description": "Some classes to read/write the superglobal variables",
     "keywords": [
-        "superglobal", "$_REQUEST", "$_SESSION", "$_SERVER"
+        "superglobal", "superglobals"
     ],
     "homepage": "https://github.com/afeys/flphpsuperglobals",
     "license": "MIT",
