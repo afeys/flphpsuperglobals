@@ -2,7 +2,7 @@
 namespace FL;
 
 class FrontEnd {
-    public static function getFieldValue($fieldname, $default = "") {
+    public static function getFieldValue(string $fieldname, string $default = null): string {
         if (isset($_REQUEST[$fieldname])) {
             if (!is_array($_REQUEST[$fieldname])) {
                 return urldecode($_REQUEST[$fieldname]);
@@ -14,17 +14,17 @@ class FrontEnd {
         }
     }
 
-    public static function setFieldValue($fieldname, $value) {
+    public static function setFieldValue(string $fieldname, string $value): void {
         $_REQUEST[$fieldname] = $value;
     }
 
-    public static function clearFieldValue($fieldname) {
+    public static function clearFieldValue(string $fieldname): void {
         if (isset($_REQUEST[$fieldname])) {
             unset($_REQUEST[$fieldname]);
         }
     }
 
-    public static function isSetFieldValue($fieldname) {
+    public static function isSetFieldValue(string $fieldname): boolean {
         return isset($_REQUEST[$fieldname]);
     }
 }
