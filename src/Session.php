@@ -21,7 +21,7 @@ class Session {
         }
     }
 
-    public static function isSetSessionVariable(string $variable): boolean {
+    public static function isSetSessionVariable(string $variable): bool {
         return isset($_SESSION[$variable]);
     }
     
