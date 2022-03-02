@@ -24,4 +24,9 @@ class Session {
     public static function isSetSessionVariable(string $variable): boolean {
         return isset($_SESSION[$variable]);
     }
+    
+    public static function clearAllSessionVariables() {
+        $_SESSION = array();
+    }
+    
 }
