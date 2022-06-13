@@ -1,7 +1,9 @@
 <?php
+
 namespace FL;
 
 class FrontEnd {
+
     public static function getFieldValue(string $fieldname, string $default = null): string {
         if (isset($_REQUEST[$fieldname])) {
             if (!is_array($_REQUEST[$fieldname])) {
@@ -27,4 +29,29 @@ class FrontEnd {
     public static function isSetFieldValue(string $fieldname): boolean {
         return isset($_REQUEST[$fieldname]);
     }
+
+    public static function getPostGetDataAsString() {
+        $postgetdata = '$_GET:';
+        foreach ($_GET as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    $postgetdata .= "[" . $k2 . "]=(" . $v2 . ");";
+                }
+            } else {
+                $postgetdata .= "[" . $k . "]=(" . $v . ");";
+            }
+        }
+        $postgetdata .= "_POST:";
+        foreach ($_POST as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    $postgetdata .= "[" . $k2 . "]=(" . $v2 . ");";
+                }
+            } else {
+                $postgetdata .= "[" . $k . "]=(" . $v . ");";
+            }
+        }
+        return $postgetdata;
+    }
+
 }
