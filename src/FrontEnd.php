@@ -30,6 +30,10 @@ class FrontEnd {
         return isset($_REQUEST[$fieldname]);
     }
 
+    public static function htmlComment($comment) {
+        return "<!-- " . $comment . " -->";
+    }
+    
     public static function getPostGetDataAsString() {
         $postgetdata = '$_GET:';
         foreach ($_GET as $k => $v) {
