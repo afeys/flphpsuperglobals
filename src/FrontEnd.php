@@ -26,7 +26,7 @@ class FrontEnd {
         }
     }
 
-    public static function isSetFieldValue(string $fieldname): boolean {
+    public static function isSetFieldValue(string $fieldname): bool {
         return isset($_REQUEST[$fieldname]);
     }
 
