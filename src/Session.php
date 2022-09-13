@@ -3,7 +3,7 @@
 namespace FL;
 
 class Session {
-    public static function setSessionVariable(string $variable, string $value): void {
+    public static function setSessionVariable(string $variable, mixed $value): void {
         $_SESSION[$variable] = $value;
     }
 
@@ -13,7 +13,7 @@ class Session {
         }
     }
 
-    public static function getSessionVariable(string $variable): string {
+    public static function getSessionVariable(string $variable): mixed {
         if (isset($_SESSION[$variable])) {
             return $_SESSION[$variable];
         } else {
