@@ -4,5 +4,6 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 require_once(dirname(__FILE__) . '/FrontEnd.php');
+require_once(dirname(__FILE__) . '/Request.php');
 require_once(dirname(__FILE__) . '/Server.php');
 require_once(dirname(__FILE__) . '/Session.php');
